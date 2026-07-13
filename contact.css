@@ -1,0 +1,361 @@
+/* Base styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333; /* Dark grey for better readability on white background */
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+/* Orange Gradient Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(184, 134, 11, 0.7), rgba(255, 140, 0, 0.7)); /* Gold to Orange Gradient */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    max-width: 800px;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(252, 251, 251, 0.5); /* Subtle shadow for better readability */
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+font-family: 'Playfair Display', serif;
+text-shadow: 1px 1px 2px rgba(250, 248, 248, 0.5);
+}
+
+.hero a.btn-neon {
+    background-color: #B8860B; /* Darker Gold */
+    color: #fff;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.7); /* Neon effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero a.btn-neon:hover {
+    background-color: #A65C00; /* Even darker gold on hover */
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.9); /* Stronger neon effect on hover */
+}
+
+
+
+
+/* Section Overlay for Content */
+.section-overlay {
+    position: relative;
+    padding: 4rem 0;
+    background-color: #f9f9f9; /* Light grey background for contrast */
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #B8860B; /* Darker Gold */
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #B8860B; /* Darker Gold underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.contact-form h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+    color: #B8860B; /* Darker Gold */
+}
+
+.contact-form .form-control {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.contact-form .btn-primary {
+    background-color: #B8860B; /* Darker Gold */
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 50px;
+    color: #fff; /* White */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #A65C00; /* Even Darker Gold */
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.7);
+}
+
+/* Contact Information */
+.contact-info {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.contact-info h2 {
+    margin-top: 0;
+    color: #B8860B; /* Darker Gold */
+}
+
+.contact-info p,
+.contact-info a {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #B8860B; /* Darker Gold */
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #A65C00; /* Even Darker Gold */
+}
+
+/* Social Media Links */
+.social-links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #B8860B; /* Darker Gold */
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #A65C00; /* Even Darker Gold */
+    transform: scale(1.1);
+}
+
+/* Google Map */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .section-overlay {
+        padding: 2rem 0;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 1.5rem;
+    }
+
+    .social-links a {
+        font-size: 1.75rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form,
+    .contact-info {
+        padding: 1rem;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Email and Phone Copy Styles */
+.copy-message {
+    display: none;
+    margin-left: 10px;
+    color: #B8860B; /* Darker Gold */
+    font-weight: bold;
+}
+
+/* Show the full email on screens larger than 425px */
+.email-text {
+    display: inline; /* Normal email display on larger screens */
+}
+
+.email-icon {
+    display: none; /* Hide the icon on larger screens */
+    cursor: pointer;
+}
+
+/* On screens smaller than 425px, hide the full email and show the icon */
+@media (max-width: 425px) {
+    .email-text {
+        display: none; /* Hide the full email text */
+    }
+
+    .email-icon {
+        display: inline; /* Show the email icon */
+    }
+
+    .fas.fa-envelope {
+        font-size: 1.5em; /* Adjust the size of the icon */
+        color: #B8860B; /* Match design */
+    }
+}
+
+/* New Styles for Accessibility and Interactive Elements */
+
+/* Make email-icon focusable for keyboard users */
+.email-icon:focus,
+.email-icon:hover {
+    color: #A65C00; /* Even Darker Gold on hover/focus */
+}
+
+/* Enhance button accessibility */
+.contact-form .btn-primary:focus {
+    outline: 2px dashed #A65C00;
+    outline-offset: 4px;
+}
+
+/* Adjust hero-content for better responsiveness */
+.hero-content {
+    padding: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

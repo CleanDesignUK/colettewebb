@@ -1,0 +1,493 @@
+/* CSS Variables for Consistent Colour Palette */
+    :root {
+        --primary-color: #DAA520; /* Gold */
+        --secondary-color: #ff8c00; /* Orange */
+        --dark-color: #000000; /* Black */
+        --light-bg: #ffffff; /* White background */
+    }
+
+    /* Base Styles */
+    body {
+        background-color: var(--light-bg);
+        font-family: 'Open Sans', sans-serif;
+        color: var(--dark-color);
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        color: var(--dark-color);
+        text-align: center;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        width: 80px;
+        height: 4px;
+        background-color: var(--secondary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Image Cutout Effect */
+    .image-cutout {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 550px; /* Adjust as needed */
+        z-index: 1;
+        margin-bottom: -100px;
+ margin-top: -100px; /* Pull the section upwards */
+    }
+
+    .image-cutout .parallax-image {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    /* Section with Top and Bottom Cutout */
+    .section-cutout {
+        background-color: white; /* Yellow gold */
+        position: relative;
+        overflow: visible;
+        padding-top: 120px; /* Adjust padding for content spacing */
+        padding-bottom: 120px;
+        clip-path: polygon(0 0%, 100% 8%, 100% 100%, 0% 92%); 
+        z-index: 2; /* Ensure it's above the image */
+    }
+
+    /* Adjusting the overlap */
+    .section-cutout::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        height: 40px; 
+        background-color: var(--primary-color);
+        clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0% 100%);
+        z-index: -1;
+    }
+
+    /* Service Content Styles */
+    .service-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .service-content p i {
+        color: var(--secondary-color);
+        margin-right: 10px;
+    }
+
+    /* Pricing Card */
+    .pricing-card {
+        max-width: 18rem;
+        margin: 0 auto;
+    }
+
+    /* Accreditation Logo */
+    .accreditation-logo img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    /* Contact Button */
+    .contact-button {
+        background-color: #fff;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+        font-weight: bold;
+    }
+
+    .contact-button:hover {
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .image-cutout {
+            height: 500px; /* Adjust for smaller screens */
+        }
+
+        .section-cutout {
+            clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%); 
+        }
+
+        .section-cutout::before {
+            top: -30px;
+            height: 30px;
+        }
+
+        .service-content p {
+            font-size: 1rem;
+        }
+    }
+
+/* CSS Variables for Consistent Colour Palette */
+    :root {
+        --primary-color: #DAA520; /* Gold */
+        --secondary-color: #ff8c00; /* Orange */
+        --dark-color: #000000; /* Black */
+        --light-bg: #ffffff; /* White background */
+    }
+
+    /* Base Styles */
+    body {
+        background-color: var(--light-bg);
+        font-family: 'Open Sans', sans-serif;
+        color: var(--dark-color);
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        color: var(--dark-color);
+        text-align: center;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        width: 80px;
+        height: 4px;
+        background-color: var(--secondary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Image Cutout Effect */
+    .image-cutout {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 550px; /* Adjust as needed */
+        z-index: 1;
+        margin-bottom: -100px;
+        margin-top: -100px; /* Pull the section upwards */
+    }
+
+    .parallax-image {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    /* Section with Top and Bottom Cutout */
+    .section-cutout {
+        background-color: white; /* White background */
+        position: relative;
+        overflow: visible;
+        padding-top: 120px; /* Adjust padding for content spacing */
+        padding-bottom: 120px;
+        clip-path: polygon(0 0%, 100% 8%, 100% 100%, 0% 92%);
+        z-index: 2; /* Ensure it's above the image */
+    }
+
+    /* Adjusting the overlap */
+    .section-cutout::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: var(--primary-color);
+        clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0% 100%);
+        z-index: -1;
+    }
+
+    /* Service Content Styles */
+    .service-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .service-content p i {
+        color: var(--secondary-color);
+        margin-right: 10px;
+    }
+
+    /* Pricing Card */
+    .pricing-card {
+        max-width: 18rem;
+        margin: 0 auto;
+    }
+
+    /* Accreditation Logo */
+    .accreditation-logo img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    /* Contact Button */
+    .contact-button {
+        background-color: #fff;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+        font-weight: bold;
+    }
+
+    .contact-button:hover {
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .image-cutout {
+            height: 500px; /* Adjust for smaller screens */
+        }
+
+        .section-cutout {
+            clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%);
+        }
+
+        .section-cutout::before {
+            top: -30px;
+            height: 30px;
+        }
+
+        .service-content p {
+            font-size: 1rem;
+        }
+
+        .call-to-action-section .cta-text {
+            font-size: 1.2rem;
+        }
+    }
+
+    /* Call to Action Section */
+    .call-to-action-section {
+        position: relative;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .call-to-action-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 1;
+    }
+
+    .call-to-action-section .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .call-to-action-section .cta-text {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .image-cutout {
+            height: 500px; /* Adjust for smaller screens */
+        }
+
+        .section-cutout {
+            clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%);
+        }
+
+        .section-cutout::before {
+            top: -30px;
+            height: 30px;
+        }
+
+        .service-content p {
+            font-size: 1rem;
+        }
+
+        .call-to-action-section .cta-text {
+            font-size: 1.2rem;
+        }
+    }
+
+     /* Custom Responsive YouTube Embed with Vertical Clipping */
+    .vertical-video-container {
+        position: relative;
+        width: 100%;
+        height: 80vh; /* Set height to 100% of the viewport height */
+        max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+        overflow: hidden; /* Hide overflow to clip the video */
+    }
+
+    .vertical-video-container iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5); /* Center and scale the video */
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        border: 0;
+    }
+
+    /* Optional: Adjust iframe scaling for better visibility */
+    @media (max-width: 768px) {
+        .vertical-video-container {
+            height: 50vh; /* Adjust height for smaller screens */
+        }
+
+        .vertical-video-container iframe {
+            transform: translate(-50%, -50%) scale(1.2); /* Adjust scaling for smaller screens */
+        }
+    }
+
+    /* Optional: Adjust heading style for better SEO and accessibility */
+    #singing-for-wellbeing h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    /* Enhance text readability */
+    #singing-for-wellbeing p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    /* Responsive Adjustments for Smaller Screens */
+    @media (max-width: 768px) {
+        #singing-for-wellbeing h2 {
+            font-size: 1.75rem;
+        }
+
+        #singing-for-wellbeing p {
+            font-size: 1rem;
+        }
+    }
+
+    .testimonial-card {
+    background: rgba(255, 140, 0, 0.08);
+    border-radius: 14px;
+    padding: 30px;
+    min-height: 220px; /* equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.testimonial-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* SWIPE SCROLL FOR MOBILE */
+.testimonial-scroll {
+    overflow-x: auto;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .testimonial-card {
+        min-width: 260px;
+        flex: 0 0 auto;
+    }
+}
+
+.testimonial-grid .testimonial-card {
+    background: rgba(255,140,0,0.08);
+    border-radius: 12px;
+    padding: 30px;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: all 0.25s ease;
+}
+
+.testimonial-grid .testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.testimonial-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Hide desktop grid on mobile */
+@media (max-width: 767px) {
+    .testimonial-grid {
+        display: none !important;
+    }
+}
+
+/* Hide carousel on desktop */
+@media (min-width: 768px) {
+    #testimonialCarousel {
+        display: none !important;
+    }
+}
+/* Remove default Bootstrap arrow icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none !important;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* LEFT ARROW */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff8c00' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E") !important;
+}
+
+/* RIGHT ARROW */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff8c00' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 1 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+}
+
+.lesson-pricing-section {
+    padding-bottom: 160px !important;
+}

@@ -1,0 +1,185 @@
+/* CSS Variables for Consistent Color Palette */
+    :root {
+        --primary-color: #B8860B; /* Gold */
+        --secondary-color: #ff8c00; /* Subtle Orange */
+        --dark-color: #000000 !important; /* Black */
+        --light-bg: #ffffff; /* White background */
+        --gradient-bg: linear-gradient(45deg, #DAA520, #ff8c00);
+    }
+    /* Base Styles */
+    body {
+        background-color: var(--light-bg);
+        font-family: 'Open Sans', sans-serif;
+        color: var(--dark-color);
+    }
+    main {
+        max-width: 1800px;
+        margin: auto;
+    }
+    .navbar-container {
+        max-width: 1600px;
+        margin: auto;
+    }
+    /* Apply 'Playfair Display' to All Headings, Links, Navbar Elements, and Buttons */
+    h1, h2, h3, h4, h5, h6,
+    .nav-link,
+    .navbar-brand,
+    .dropdown-item,
+    .btn,
+    a {
+        font-family: 'Playfair Display', serif !important;
+    }
+
+    a {
+        font-weight: bold !important;
+        text-decoration: none;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        background: var(--gradient-bg) !important;
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    .navbar-brand img {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+height:60px;
+width:60px;
+    }
+
+    .nav-link {
+        color: var(--dark-color) !important;
+        transition: color 0.3s ease;
+        font-weight: 600;
+    }
+
+    .nav-link:hover {
+        color: var(--primary-color) !important;
+    }
+
+    /* Navbar Toggler */
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-toggler i {
+        color: var(--dark-color);
+        font-size: 1.5rem;
+    }
+
+    /* Page Header (Logo and Title) */
+    .page-header {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        color: var(--dark-color);
+        margin: 0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 1200px) {
+        .page-header {
+            font-size: 1.4rem;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .page-header {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .page-header {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .page-header {
+            font-size: 1.1rem !important;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .page-header {
+            font-size: 15px !important;
+        }
+    }
+    .navbar-toggler:focus {
+        /* Remove focus outline */
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Footer Styles */
+    footer {
+        background: var(--gradient-bg);
+        color: var(--dark-color);
+        padding: 40px 0;
+        border-top: 2px solid var(--primary-color);
+    }
+
+    footer h5 {
+        color: #000000 !important;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    footer a {
+        color: #000000 !important;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: var(--primary-color);
+    }
+
+    .social-links i {
+        font-size: 2rem;
+        margin: 0 10px;
+        color: var(--dark-color);
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-links i:hover {
+        color: var(--primary-color);
+        transform: scale(1.1);
+    }
+
+    /* Button Styles */
+    .btn-primary {
+        background-color: #DAA520 !important;
+        border: none !important;
+        color: #000 !important;
+        font-weight: bold !important;
+        transition: background-color 0.3s ease, color 0.3s ease !important;
+        border-radius: 50px !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #B8860B !important; /* Darker gold */
+        color: #fff !important;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .navbar {
+            background: var(--gradient-bg) !important;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+
+    /* Block for additional CSS */

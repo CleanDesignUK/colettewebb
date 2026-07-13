@@ -1,0 +1,432 @@
+/* Base styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333; /* Dark grey for better readability on white background */
+    background-color: #fff; /* White background */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Corrected property name */
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Titles */
+.about-page h1,
+.about-page h2 {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #8B6914; /* Darker gold for better contrast */
+    text-align: center; /* Center the headings */
+}
+
+.about-page h1::after,
+.about-page h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #8B6914; /* Darker gold underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Introduction Section */
+.intro-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.intro-section.animate__fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-section .intro-image {
+    flex: 1 1 40%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.intro-section .intro-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centers the image and adds vertical spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-section .intro-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.intro-section .intro-text {
+    flex: 1 1 60%;
+    padding: 0 2rem;
+    text-align: center; /* Center the text */
+}
+
+.intro-section .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.animate__fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section h2 {
+    color: #8B6914; /* Darker gold */
+    text-align: center; /* Center the headings */
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center; /* Center the paragraphs */
+}
+
+.content-section ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center; /* Center the list */
+}
+
+.content-section ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 1rem;
+}
+
+.content-section ul li i {
+    color: #8B6914; /* Darker gold */
+    margin-right: 0; /* Removed right margin since items are centered */
+    font-size: 1.2rem;
+    margin-top: 4px; /* Align with the first line of text */
+    margin-bottom: 0.5rem; /* Add space below the icon */
+}
+
+.content-section ul li strong {
+    color: #8B6914; /* Darker gold */
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem; /* Space between name and description */
+    text-align: center; /* Center the strong text */
+}
+
+.content-section p,
+.content-section ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center; /* Center the text */
+}
+
+/* Experience and Qualification Items */
+.experience-item,
+.qualification-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.animate__fadeInUp .experience-item,
+.content-section.animate__fadeInUp .qualification-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensuring icons inside strong tags are coloured correctly */
+.experience-item strong .icon,
+.qualification-item strong .icon {
+    color: #8B6914; /* Darker gold */
+}
+
+/* Icon Styling */
+.experience-item .icon,
+.qualification-item .icon {
+    color: #8B6914; /* Darker gold */
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Strong Tag Styling */
+.experience-item strong,
+.qualification-item strong {
+    color: #8B6914; /* Darker gold */
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem; /* Space between name and description */
+    text-align: center; /* Center the strong text */
+}
+
+/* Description Paragraphs */
+.experience-item p,
+.qualification-item p {
+    color: #555; /* Medium grey for descriptions */
+    margin: 0; /* Remove default margins */
+    padding-left: 0; /* Remove any unintended padding */
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center; /* Center the description text */
+}
+
+/* Image placeholders in content sections */
+.section-image {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.section-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive YouTube Video */
+.youtube-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 25px;
+    height: 0;
+    margin-top: 2rem;
+}
+
+.youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Blockquote */
+blockquote {
+    position: relative;
+    padding: 1.5rem 2rem;
+    background-color: #f9f9f9; /* Light grey */
+    border-left: 5px solid #8B6914; /* Darker gold */
+    margin: 3rem 0;
+    font-style: italic;
+    color: #555;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center the blockquote text */
+}
+
+blockquote:hover {
+    background-color: #f0f0f0; /* Slightly lighter on hover */
+}
+
+blockquote p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Call to Action Button */
+.btn-primary {
+    background-color: #8B6914; /* Darker gold */
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 50px;
+    color: #fff; /* White */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #6B4C0C; /* Even darker gold */
+    box-shadow: 0 0 10px rgba(139, 105, 20, 0.7);
+}
+
+/* Social Media Links */
+.social-media,
+.social-links {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-media a,
+.social-links a {
+    color: #8B6914; /* Darker gold */
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover,
+.social-links a:hover {
+    color: #6B4C0C; /* Even darker gold */
+    transform: scale(1.1);
+}
+
+/* Global Image Styling */
+.about-page img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centers the image and adds vertical spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-page img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Constrain Maximum Height for Specific Images */
+.about-page .intro-section .intro-image img,
+.about-page .content-section .section-image img,
+.about-page .testimonials .section-image img {
+    max-height: 350px;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    width: 100%;
+}
+
+/* Specific Styling for Blockquote Images */
+.about-page blockquote .section-image img {
+    max-height: 250px;
+    object-fit: contain; /* Keeps the entire image visible */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .intro-section {
+        flex-direction: column;
+    }
+
+    .intro-section .intro-text {
+        padding: 2rem 0;
+    }
+
+    /* Reduce max-height on smaller screens */
+    .about-page .intro-section .intro-image img,
+    .about-page .content-section .section-image img,
+    .about-page .testimonials .section-image img {
+        max-height: 250px;
+    }
+
+    /* Adjust margins for better spacing on mobile */
+    .about-page img {
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further reduce max-height for very small screens */
+    .about-page .intro-section .intro-image img,
+    .about-page .content-section .section-image img,
+    .about-page .testimonials .section-image img {
+        max-height: 200px;
+    }
+
+    /* Reduce font sizes for better fit */
+    .about-page h1,
+    .about-page h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-section p,
+    .experience-item p,
+    .qualification-item p,
+    blockquote p {
+        font-size: 1rem;
+    }
+
+    /* Adjust button size */
+    .btn-primary {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Adjust social media icon sizes */
+    .social-media a,
+    .social-links a {
+        font-size: 1.25rem;
+    }
+}
+
+/* Email and Phone Copy Styles */
+.copy-message {
+    display: none;
+    margin-left: 10px;
+    color: #8B6914; /* Darker gold */
+    font-weight: bold;
+}
+
+/* Show the full email on screens larger than 425px */
+.email-text {
+    display: inline; /* Normal email display on larger screens */
+}
+
+/* Hide the email text and show the icon on smaller screens */
+.email-icon {
+    display: none; /* Hide the icon on larger screens */
+    cursor: pointer;
+}
+
+/* On screens smaller than 425px, hide the full email and show the icon */
+@media (max-width: 425px) {
+    .email-text {
+        display: none; /* Hide the full email text */
+    }
+
+    .email-icon {
+        display: inline; /* Show the email icon */
+    }
+
+    .fas.fa-envelope {
+        font-size: 1.5em; /* Adjust the size of the icon */
+        color: #8B6914; /* Darker gold to match design */
+    }
+}
+
+/* Animate on Scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate__fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+}

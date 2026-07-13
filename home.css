@@ -1,0 +1,800 @@
+/* CSS Variables for Consistent Theming */
+:root {
+    --primary-color: #B8860B; /* Darker Gold */
+    --secondary-color: #ff8c00; /* Subtle Orange */
+    --dark-color: #000000; /* Black */
+    --light-bg: #ffffff; /* White background */
+    --gradient-bg: linear-gradient(45deg, #B8860B, #ff8c00);
+    --light-text: #ffffff; /* White text */
+    --focus-color: #ff8c00; /* Focus outline color */
+}
+
+/* Base Styles */
+body {
+    background-color: var(--light-bg);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-color);
+}
+
+/* Apply 'Playfair Display' to All Headings, Links, Navbar Elements, and Buttons */
+h1, h2, h3, h4, h5, h6,
+.nav-link,
+.navbar-brand,
+.dropdown-item,
+.btn,
+a {
+    font-family: 'Playfair Display', serif !important;
+}
+
+a {
+    font-weight: bold !important;
+    text-decoration: none;
+}
+
+a:focus,
+button:focus,
+.btn:focus {
+    outline: 2px dashed var(--focus-color);
+    outline-offset: 4px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: var(--gradient-bg) !important;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.navbar-brand:focus {
+    outline: none;
+}
+
+.navbar-brand a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar-brand a:focus {
+    outline: none;
+}
+
+.nav-link {
+    color: var(--dark-color) !important;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--primary-color) !important;
+}
+
+/* Navbar Toggler */
+button.navbar-toggler {
+    border: none;
+}
+
+button.navbar-toggler i {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}
+
+/* Page Header (Logo and Title) */
+.page-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+/* Responsive styles for Page Header */
+@media (max-width: 1200px) {
+    .page-header {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-header {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .page-header {
+        font-size: 15px !important;
+    }
+}
+
+/* Remove focus outline from navbar toggler */
+.navbar-toggler:focus {
+    /* Remove focus outline */
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--gradient-bg);
+    color: var(--dark-color);
+    padding: 40px 0;
+    border-top: 2px solid var(--primary-color);
+}
+
+footer h5 {
+    color: var(--dark-color);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--primary-color);
+}
+
+.social-links i {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: var(--dark-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links i:hover,
+.social-links i:focus {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #A65C00; /* Even Darker Gold */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(166, 92, 0, 0.7);
+}
+
+/* Neon Button Effect */
+.btn-neon {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+.btn-neon:hover,
+.btn-neon:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        background: var(--gradient-bg) !important;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Existing responsive styles for other elements */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .services .card-title {
+        font-size: 1.25rem;
+    }
+
+    .testimonial-item p {
+        font-size: 1rem;
+    }
+
+    /* New styles for about-overview */
+    .about-overview {
+        background-image: url("https://res.cloudinary.com/dhdgvgf7l/image/upload/v1727006254/adults-singing-9_c6wucq.jpg");
+        background-position: center;
+        background-attachment: scroll; /* Disable fixed background for better performance on mobile */
+        background-size: cover; /* Ensure the image covers the entire section */
+        clip-path: none; /* Remove clip-path for better readability */
+        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .about-overview .container {
+        padding: 0 1rem; /* Optional: Adjust container padding */
+    }
+
+    .about-overview h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .about-overview p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .about-overview .btn {
+        padding: 0.5rem 1.5rem; /* Adjust button size */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about-overview,
+    .contact-overview {
+        clip-path: none;
+    }
+}
+
+/* Hero Section with Parallax Effect */
+/* General Hero Section Styles */
+.hero {
+    position: relative;
+    min-height: 110vh; /* Ensure it fills the viewport */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-position: 45% left !important; 
+}
+
+.hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    object-position: 10% top; /* Focus the image on the left center for mobile */
+}
+
+/* Dark overlay for contrast */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay for better text contrast */
+    z-index: 2;
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Stronger shadow for text contrast */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text contrast */
+}
+
+/* Button Neon Effect */
+.btn-neon {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+.btn-neon:hover,
+.btn-neon:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+}
+
+/* Parallax Effect for larger screens */
+@media (min-width: 500px) {
+    .hero {
+        /* Enable parallax effect for larger screens */
+        background-position: top left; /* Focus image on the left */
+    }
+
+    .hero picture img {
+        display: none; /* Hide static image when using background-attachment */
+    }
+
+    .hero {
+        background-image: url('https://res.cloudinary.com/dhdgvgf7l/image/upload/v1727533881/hero-1_lv1kuz.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top left; 
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 499px) {
+    .hero {
+        background-attachment: scroll; /* Disable parallax for mobile */
+
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+}
+
+.services h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.services h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services .card {
+    transition: transform 0.4s, box-shadow 0.4s;
+    overflow: hidden;
+    border: none;
+    border-radius: 15px;
+}
+
+.services .card img {
+    transition: transform 0.4s;
+    border-radius: 15px 15px 0 0;
+}
+
+.services .card:hover,
+.services .card:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.services .card:hover img,
+.services .card:focus-within img {
+    transform: scale(1.1);
+}
+
+.services .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* About Section */
+.about-overview {
+    background-image: url("https://res.cloudinary.com/dhdgvgf7l/image/upload/v1726981883/wellbeing-singing-4_cwemup.jpg");
+    background-attachment: fixed;
+    object-position: center right;
+    background-size: cover;
+    color: var(--light-text);
+    text-align: center;
+    position: relative;
+    padding: 5rem 0;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 85%);
+}
+
+.about-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.about-overview .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-overview h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about-overview p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.about-overview .btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease;
+}
+
+.about-overview .btn:hover,
+.about-overview .btn:focus {
+    background-color: #A65C00; /* Even Darker Gold */
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 0;
+    background-color: #fafafa;
+}
+
+.testimonials h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.testimonial-item {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    padding: 2rem;
+    border-radius: 10px;
+    
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    background-color: #f9f9f9;
+border: none;
+}
+
+
+
+.testimonial-item p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-item p:last-child {
+    font-size: 1rem;
+    font-weight: bold;
+color: #B8860B;
+}
+
+/* Contact Section */
+.contact-overview {
+    text-align: center;
+    padding: 5rem 0;
+    background: url('https://res.cloudinary.com/dhdgvgf7l/image/upload/v1726730716/placeholder-experience_dbbdjw.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); /* Cutout shape preserved */
+    position: relative;
+    background-position: top center;
+}
+
+.contact-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add overlay for better contrast */
+    z-index: 1;
+}
+
+.contact-overview .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-overview h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-overview p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.contact-overview .btn {
+    background-color: #fff;
+    color: var(--dark-color);
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-overview .btn:hover,
+.contact-overview .btn:focus {
+    background-color: #f1f1f1;
+    color: var(--dark-color);
+}
+
+/* Responsive Design for About and Contact Sections */
+@media (max-width: 768px) {
+    .contact-overview {
+        background-position: center;
+        clip-path: none; /* Remove clip-path on smaller screens for better readability */
+    }
+
+    .contact-overview h2 {
+        font-size: 2rem;
+    }
+
+    .contact-overview p {
+        font-size: 1rem;
+    }
+
+    /* New styles for about-overview */
+    .about-overview {
+        background-image: url("https://res.cloudinary.com/dhdgvgf7l/image/upload/v1727006254/adults-singing-9_c6wucq.jpg");
+        background-position: center;
+        background-attachment: scroll; /* Disable fixed background for better performance on mobile */
+        background-size: cover; /* Ensure the image covers the entire section */
+        clip-path: none; /* Remove clip-path for better readability */
+        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .about-overview .container {
+        padding: 0 1rem; /* Optional: Adjust container padding */
+    }
+
+    .about-overview h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .about-overview p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .about-overview .btn {
+        padding: 0.5rem 1.5rem; /* Adjust button size */
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .services .card-title {
+        font-size: 1.25rem;
+    }
+
+    .testimonial-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about-overview,
+    .contact-overview {
+        clip-path: none;
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Projects & Groups teaser – compact variant ───────────── */
+.projects-overview{
+    padding:2.5rem 0;                      /* ⬇ tighter top/bottom */
+    background:#fff9f4;
+}
+
+.projects-overview h2{margin-bottom:2rem;}
+.projects-overview h2::after{margin:.4rem auto 0;}
+
+.projects-overview .card{
+    border:none;
+    border-radius:12px;
+    overflow:hidden;
+    transition:transform .35s,box-shadow .35s;
+}
+
+.projects-overview .card img{
+    height:220px;                          /* ⬇ shorter image window */
+    object-fit:cover;
+    transition:transform .35s;
+}
+
+.projects-overview .card-body{padding:1.25rem 1rem;}
+.projects-overview .card-title{font-size:1.25rem;}
+.projects-overview .card-text{font-size:.95rem;line-height:1.4;}
+
+.projects-overview .card:hover,
+.projects-overview .card:focus-within{
+    transform:translateY(-6px);
+    box-shadow:0 12px 26px rgba(0,0,0,.16);
+}
+
+.projects-overview .card:hover img,
+.projects-overview .card:focus-within img{transform:scale(1.05);}
+
+.new-icon{color:var(--secondary-color);font-size:1.1rem;margin-left:.3rem;}
+
+.announcement-bar {
+    background: #f9e5b9; /* soft gold background */
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 2px solid var(--primary-color);
+}
+.announcement-bar a.btn-sm {
+    background: #fff;
+    color: #000;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+.announcement-bar a.btn-sm:hover {
+    background: #fff3d6;
+}
+
+/* Wild Roots Event Section */
+.wild-roots-event {
+    background: #fff9f4;
+    padding: 4rem 0;
+}
+
+.wild-roots-event h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.wild-roots-event h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wild-roots-event .event-card {
+    border: none;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.wild-roots-event .event-detail {
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+}
+
+.wild-roots-event .event-detail i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
